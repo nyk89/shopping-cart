@@ -37,17 +37,33 @@ def to_usd(my_price):
 
 # TODO: write some Python code here to produce the desired output
 
-#print(products)
+# #print(products)
+# print("---------------------------------")
 
+# import datetime
+# now = datetime.datetime.now()
+# print ("Checkout at:", now.strftime("%Y-%m-%d %H:%M %p"))
 
 print("---------------------------------")
-print("Kelly's Organics")
-print("www.KellysOrganics.com")
-print("---------------------------------")
+#print("Please input a product identifier:")
+x = input("Please input a product identifier:") #> this is a string
+# print(x)
+# print(type(x))
+matching_products = [p for p in products if str(p["id"]) == str(x)]
+matching_product = matching_products[0]
+print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
 
-import datetime
-now = datetime.datetime.now()
-print ("Checkout at:", now.strftime("%Y-%m-%d %H:%M %p"))
+
+# if x == "done":
+#     print("---------------------------------")
+#     print("Kelly's Organics")
+#     print("www.KellysOrganics.com")
+#     print("---------------------------------")
+
+# import datetime
+# now = datetime.datetime.now()
+# print ("Checkout at:", now.strftime("%Y-%m-%d %H:%M %p"))
+# print("---------------------------------")
 
 
 # print("---------------------------------")
