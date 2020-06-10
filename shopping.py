@@ -38,40 +38,53 @@ def to_usd(my_price):
 # TODO: write some Python code here to produce the desired output
 
 # #print(products)
-# print("---------------------------------")
+print("---------------------------------")
 
-# import datetime
-# now = datetime.datetime.now()
-# print ("Checkout at:", now.strftime("%Y-%m-%d %H:%M %p"))
+import datetime
+now = datetime.datetime.now()
+print ("Checkout at:", now.strftime("%Y-%m-%d %H:%M %p"))
 
 print("---------------------------------")
 total_price = 0
+selected_ids = []
 
 while True:
     selected_id = input("Please input a product identifier:") #> this is a string
     if selected_id == "DONE":
         break
     else:
-        matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
-        matching_product = matching_products[0]
-        total_price = total_price + matching_product["price"]
-        print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+        # matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
+        # matching_product = matching_products[0]
+        # total_price = total_price + matching_product["price"]
+        # print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+        selected_ids.append(selected_id)
 
+print("---------------------------------")
+print("KELLY'S ORGANICS")
+print("WWW.KELLYSORGANICS.COM")
+print("---------------------------------")
 
-print("TOTAL PRICE: " + str(total_price)) #> format as USD
+import datetime
+now = datetime.datetime.now()
+print ("CHECKOUT AT:", now.strftime("%Y-%m-%d %H:%M %p"))
+print("---------------------------------")
+print("SELECTED PRODUCTS:")
 
+for selected_id in selected_ids:
+    matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
+    matching_product = matching_products[0]
+    total_price = total_price + matching_product["price"]
+    print("-" + matching_product["name"] + " (" + to_usd(matching_product["price"]) + ")")
 
-#     print("---------------------------------")
-#     print("Kelly's Organics")
-#     print("www.KellysOrganics.com")
-#     print("---------------------------------")
-
-# import datetime
-# now = datetime.datetime.now()
-# print ("Checkout at:", now.strftime("%Y-%m-%d %H:%M %p"))
-# print("---------------------------------")
-
-
+print("---------------------------------")
+print("SUBTOTAL: " + to_usd(total_price))
+# print("SUBTOTAL: " + str(total_price)) #> format as USD   
+# print("TAX: " + str(total_price*.08)) 
+print("TAX: " + to_usd(total_price*.08)) 
+print("TOTAL: ")
+print("---------------------------------")
+print("EAT DRINK AND BE MERRY!")
+print("---------------------------------")
 # print("---------------------------------")
 # print("CHECKOUT AT:", date(), time())
 # print("---------------------------------")
