@@ -75,7 +75,7 @@ for selected_id in selected_ids:
 
 print("---------------------------------")
 print("SUBTOTAL: " + to_usd(total_price))
-tax_rate = .08
+tax_rate = .0875
 print("TAX: " + to_usd(total_price*tax_rate)) 
 print("TOTAL: " + to_usd(total_price + total_price*tax_rate))
 print("---------------------------------")
