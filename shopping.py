@@ -35,9 +35,6 @@ def to_usd(my_price):
     """
     return f"${my_price:,.2f}" #> $12,000.71
 
-# TODO: write some Python code here to produce the desired output
-
-# #print(products)
 print("---------------------------------")
 
 import datetime
@@ -78,39 +75,9 @@ for selected_id in selected_ids:
 
 print("---------------------------------")
 print("SUBTOTAL: " + to_usd(total_price))
-# print("SUBTOTAL: " + str(total_price)) #> format as USD   
-# print("TAX: " + str(total_price*.08)) 
-print("TAX: " + to_usd(total_price*.08)) 
-print("TOTAL: ")
+tax_rate = .08
+print("TAX: " + to_usd(total_price*tax_rate)) 
+print("TOTAL: " + to_usd(total_price + total_price*tax_rate))
 print("---------------------------------")
 print("EAT DRINK AND BE MERRY!")
 print("---------------------------------")
-# print("---------------------------------")
-# print("CHECKOUT AT:", date(), time())
-# print("---------------------------------")
-# (shopping-env)  --->> python shopping_cart.py
-# Please input a product identifier: 1
-# Please input a product identifier: 2
-# Please input a product identifier: 3
-# Please input a product identifier: 2
-# Please input a product identifier: 1
-# Please input a product identifier: DONE
-#> ---------------------------------
-#> GREEN FOODS GROCERY
-#> WWW.GREEN-FOODS-GROCERY.COM
-#> ---------------------------------
-#> CHECKOUT AT: 2020-02-07 03:54 PM
-#> ---------------------------------
-#> SELECTED PRODUCTS:
-#>  ... Chocolate Sandwich Cookies ($3.50)
-#>  ... All-Seasons Salt ($4.99)
-#>  ... Robust Golden Unsweetened Oolong Tea ($2.49)
-#>  ... All-Seasons Salt ($4.99)
-#>  ... Chocolate Sandwich Cookies ($3.50)
-#> ---------------------------------
-#> SUBTOTAL: $19.47
-#> TAX: $1.70
-#> TOTAL: $21.17
-#> ---------------------------------
-#> THANKS, SEE YOU AGAIN SOON!
-#> ---------------------------------
