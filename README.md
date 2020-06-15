@@ -14,7 +14,7 @@ Fork this [remote repository](https://github.com/nyk89/shopping-cart) under your
 Then navigate there from the command line (subsequent commands assume you are running them from the local repository's root directory):
 
 ```sh
-cd shopping-app
+cd shopping-cart
 ```
 
 Use Anaconda to create and activate a new virtual environment, perhaps called "shopping-env":
@@ -27,4 +27,6 @@ conda activate shopping-env
 Run the program by typing the following into your terminal:
 ```sh
 python shopping.py
-```sh
+```
+
+Input the product identifiers purchased as instructed and type "DONE" when complete
