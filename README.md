@@ -18,7 +18,7 @@ Then navigate there from the command line (subsequent commands assume you are ru
 cd shopping-app
 ```
 
-Use Anaconda to create and activate a new virtual environment, perhaps called "game-env":
+Use Anaconda to create and activate a new virtual environment, perhaps called "shopping-env":
 
 ```sh
 conda create -n shopping-env python=3.7 # (first time only)
