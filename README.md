@@ -10,7 +10,7 @@ This program is used to create a list of grocery items that can be input, listed
 
 ## Installation
 
-Fork this [remote repository]() under your own control, then "clone" or download your remote copy onto your local computer.
+Fork this [remote repository](https://github.com/nyk89/shopping-cart) under your own control, then "clone" or download your remote copy onto your local computer.
 
 Then navigate there from the command line (subsequent commands assume you are running them from the local repository's root directory):
 
