@@ -6,7 +6,6 @@ This program is used to create a list of grocery items that can be input, listed
 
   + Anaconda 3.7
   + Python 3.7
-  + Pip
 
 ## Installation
 
@@ -24,3 +23,8 @@ Use Anaconda to create and activate a new virtual environment, perhaps called "s
 conda create -n shopping-env python=3.7 # (first time only)
 conda activate shopping-env
 ```
+## Use
+Run the program by typing the following into your terminal:
+```sh
+python shopping.py
+```sh
