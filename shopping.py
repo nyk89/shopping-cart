@@ -37,6 +37,7 @@ def to_usd(my_price):
 
 print("---------------------------------")
 
+
 import datetime
 now = datetime.datetime.now()
 print ("Checkout at:", now.strftime("%Y-%m-%d %H:%M %p"))
@@ -45,16 +46,25 @@ print("---------------------------------")
 total_price = 0
 selected_ids = []
 
+product_ids = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+
 while True:
-    selected_id = input("Please input a product identifier:") #> this is a string
+    try:
+        selected_id = input("Please input a product identifier:") #> this is a string
+    except IndexError:
+        print("hmm, try again")
+        continue
     if selected_id == "DONE":
         break
     else:
-        # matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
-        # matching_product = matching_products[0]
-        # total_price = total_price + matching_product["price"]
-        # print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
-        selected_ids.append(selected_id)
+            # matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
+            # matching_product = matching_products[0]
+            # total_price = total_price + matching_product["price"]
+            # print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+        if selected_id.isdigit() and int(selected_id) in product_ids:
+            selected_ids.append(int(selected_id))
+        else:
+            print("hmm try again")
 
 print("---------------------------------")
 print("KELLY'S ORGANICS")
