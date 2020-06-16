@@ -52,7 +52,7 @@ while True:
     try:
         selected_id = input("Please input a product identifier:") #> this is a string
     except IndexError:
-        print("hmm, try again")
+        print("Hmm, try again. I don't think this is a valid product.")
         continue
     if selected_id == "DONE":
         break
@@ -64,7 +64,7 @@ while True:
         if selected_id.isdigit() and int(selected_id) in product_ids:
             selected_ids.append(int(selected_id))
         else:
-            print("hmm try again")
+            print("Hmm try again. I don't think this is a valid product.")
 
 print("---------------------------------")
 print("KELLY'S ORGANICS")
